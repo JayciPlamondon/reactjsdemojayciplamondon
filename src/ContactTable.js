@@ -1,9 +1,12 @@
+import {useContext} from 'react';
 import ContactRow from './ContactRow.js';
+import {ContactContext} from './ContactContext.js';
 /** <
  * Table de contact
  * @return {jsx}
  */
-export default function ContactTable({contact}) {
+export default function ContactTable() {
+  const {contact} = useContext(ContactContext);
   // pour chaque element du tableau, on crée un élément ContactRow en jsx en prop le name, phone, email
   return (
     <table>
